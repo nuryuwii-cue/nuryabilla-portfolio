@@ -73,16 +73,17 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 7rem;
+      min-height: 100vh;
     }
  
     .hero-text h1 {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(5rem, 4vw, 3.6rem);
+      font-size: clamp(4rem, 4vw, 3.6rem);
       font-weight: 800;
       color: var(--teal);
       line-height: 1.1;
       margin-bottom: 1rem;
-      margin-top: -15rem;
+      margin-top: -3.5rem;
       animation: fadeUp 0.8s ease both;
     }
  
