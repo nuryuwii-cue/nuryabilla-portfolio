@@ -497,11 +497,10 @@
       line-height: 1.1;
     }
  
-    .contact-items   { display: flex; 
+    .contact-items { display: flex; 
       flex-direction: column; 
       gap: 2rem;  
-      padding: 2.5rem;
-      width: 75%;
+      width: 30rem;
       border-radius: 20px;}
  
     .contact-item {
@@ -509,7 +508,7 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--white);
-      padding: 1rem;
+      padding: 1.2rem;
       border-radius: 15px;
       box-shadow: var(--teal) 0px 4px 9px -3px, #2d3535 0px 2px 1px -1px;
       transition: transform 0.25s, box-shadow 0.25s;
