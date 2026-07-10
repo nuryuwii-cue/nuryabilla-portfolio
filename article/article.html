@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio GIS</title>
+        <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+ 
+  <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>    
+</head>
+    <body>
+  <div class="article">
+         <!-- NAV -->
+  <nav>
+    <a href="../index.html#home"><strong>Home</strong></a>
+    <a href="../index.html#about"><strong>About</strong></a>
+    <a href="../index.html#service"><strong>Skills</strong></a>
+    <a href="../index.html#portfolio"><strong>Portfolio</strong></a>
+    <a href="../index.html#contact"><strong>Contact</strong></a>
+  </nav>
+
+<!-- Topic Container -->
+
+    <div class="topic-container">
+        <h3>Final Project Research</h3>
+    </div>
+
+  <div class="titled">
+    <h1>Geostatistical Modeling of NO₂ Concentrations  and Its Impact on Acute Repiratory  Infections (ARI) Prevalence in Mid-2025 in Semarang City</h1>
+  </div>
+
+  <div class="date">
+    <h3>June 2026 - by Nuryabilla</h3>
+  </div>
+
+  <div class="thumbnail">
+    <img src="../assets/image/art-thumb1.jpeg" class="thumb-img">
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="container-bg">
+        <!-- Research Background -->
+        <div class="column">
+            <h2>Research Background</h2>
+            <div class="card research-bg">
+                <p>
+        Indonesia ranks among the largest contributors to global air
+pollution, accounting for approximately 75% of the global
+air pollution burden that directly affects global life
+expectancy.
+        In Semarang, the Air Quality Index (AQI) reached 147, categorized as Unhealthy, 
+        with 154,883 Acute Respiratory Infection (ARI) cases reported by mid-2025. 
+        Nitrogen dioxide (NO₂), a carcinogenic gas, is assumed to be one of the major 
+        contributors to air pollution and is suspected to be linked to the high number 
+        of ARI cases. Therefore, this study aims to determine the influence of NO₂ concentration 
+        on the high number of ARI cases, given NO₂'s carcinogenic properties and its role 
+        as a major air pollutant.</p>
+                  <p>
+        However, monitoring this issue remains challenging, as Semarang has very limited air 
+        quality monitoring stations. Sentinel-5P satellite data offers a potential solution, 
+        given its wide spatial coverage and daily data availability. Nevertheless, 
+        cloud cover, satellite viewing geometry, and the applied QA filter threshold 
+        (≥0.75) result in significant data gaps in the imagery, which need to be 
+        addressed before the data can be reliably used for further analysis.
+                  </p>
+            </div>
+        </div>
+        <!-- Research Objective -->
+        <div class="column">
+            <h2>Objective</h2>
+            <div class="card objective-bg">
+                <div class="list-item">
+                    <span class="badge">1</span>
+                    <span class="text">Evaluate ML model performance (RMSE, MAE, R²) in reconstructing missing daily NO₂ VCD values from Sentinel-5P imagery</span>
+                </div>
+                <div class="list-item">
+                    <span class="badge">2</span>
+                    <span class="text">Assess correlation between Sentinel-5P NO₂ VCD and ground-based NO₂ measurements (DLHK stations), Jan–Jun 2025</span>
+                </div>
+                <div class="list-item">
+                    <span class="badge">3</span>
+                    <span class="text">Analyze spatiotemporal distribution and NO₂ VCD hotspots in Semarang City, Jan–Jun 2025</span>
+                </div>
+                <div class="list-item">
+                    <span class="badge">4</span>
+                    <span class="text">Examine the relationship between NO₂ VCD levels and ARI prevalence in Semarang City, Jan–Jun 2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools and Data -->
+    <div class="tools">
+        <h2>Tools</h2>
+    </div>
+
+    <div class="tools-container">
+        <div class="tools-column">
+            <div class="tools-card">
+                <span class="tooltip">Python</span>
+                <img src="..\assets\image\py_tools.png" class="tools-py">
+            </div>
+        </div>
+
+        <div class="tools-column">
+            <div class="tools-card">
+                <span class="tooltip">R</span>
+                <img src="..\assets\image\r_tools.png" class="tools-r">
+            </div>
+        </div>
+
+        <div class="tools-column">
+            <div class="tools-card">
+                <span class="tooltip">Google Earth Engine</span>
+                <img src="..\assets\image\gee_tools.png" class="tools-gee">
+            </div>
+        </div>
+
+        <div class="tools-column">
+            <div class="tools-card">
+                <span class="tooltip">QGIS</span>
+                <img src="..\assets\image\qgis_tools.png" class="tools-qgis">
+            </div>
+        </div>
+    </div>
+
+    <div class="data">
+    <h2>Data Used:</h2>
+    <div class="data-container">
+    <ul class="data-column">
+        <li>NO₂ Sentinel-5P</li>
+        <li>NO₂ Ground-based station</li>
+        <li>Meteorology</li>
+        <li>Elevation</li>
+    </ul>
+    <ul class="data-column">
+        <li>Land Cover</li>
+        <li>ARI Cases</li>
+        <li>Population Density</li>
+        <li>Road Density</li>
+    </ul>
+    <ul class="data-column">
+        <li>NO₂ CAMS Global Reanalysis</li>
+    </ul>
+    </div>
+    </div>
+
+    <!-- METHOD -->
+    <div class="method">
+        <h2>Method</h2>
+
+        <div class="method-content"><b>Machine learning model development</b> (Random Forest, Random Forest with Lag Day-1, & Random Forest Spatio-Temporal Kriging) and evaluation to reconstruct NO₂ VCD.</div>
+        <div class="method-content"><b>Satellite NO₂ VCD was validated</b> against BLH-calibrated ground-based NO₂measurements measurements using multiple linear regression, with meteorological variables included as control variables.</div>
+        <div class="method-content"><b>NO₂ hotspots were identified</b> using the top 20% percentile method and validated against road density and industrial point count data.</div>
+        <div class="method-content">The best-performing NO₂ VCD estimates were aggregated at the sub-district level using zonal statistics. The aggregated NO₂ VCD was used in a Geographically and Temporally Weighted Regression (GTWR) analysis to <b>examine its association with ARI prevalence.</b></div>
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results">
+        <h2>Results and Analysis</h2>
+    </div>
+        <!-- METRICS TABLE -->
+    <div class="table-container">
+        <h2>Model Performance Metrics</h2>
+    <table class="metrics-table">
+        <thead>
+            <tr>
+                <th>Metrics</th>
+                <th>RF0 (V1)</th>
+                <th>RF (V2)</th>
+                <th>RFSTK (V3)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>R²</td>
+                <td>0.5709 ± 0.0998</td>
+                <td>0.7119 ± 0.1002</td>
+                <td><strong>0.8022 ± 0.0641</strong></td>
+            </tr>
+            <tr>
+                <td>Slope</td>
+                <td>1.08 × 10<sup>-5</sup> ± 2.29 × 10<sup>-6</sup></td>
+                <td>7.69 × 10<sup>-6</sup> ± 1.69 × 10<sup>-6</sup></td>
+                <td><strong>6.36 × 10<sup>-6</sup> ± 1.46 × 10<sup>-6</sup></strong></td>
+            </tr>
+            <tr>
+                <td>RMSE</td>
+                <td>7.67 × 10<sup>-6</sup> ± 1.17 × 10<sup>-6</sup></td>
+                <td>5.00 × 10<sup>-6</sup> ± 1.15 × 10<sup>-6</sup></td>
+                <td><strong>3.85 × 10<sup>-6</sup> ± 9.30 × 10<sup>-7</sup></strong></td>
+            </tr>
+            <tr>
+                <td>MAE</td>
+                <td>16.40% ± 14.85%</td>
+                <td>11.71% ± 10.19%</td>
+                <td><strong>8.70% ± 9.26%</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        <!-- RESULTS CONTENT #1 -->
+    <div class="results-content">
+        <img src="../assets/image/result1-a.png" class="result-img">
+        <div class="results-text">
+            <h2>Model Performance Summary</h2>
+            <ul>
+            <li>RF-STK (V3) is the best model with highest accuracy and most stable on GroupKFold: R² = 0.80 ± 0.06</li>
+            <li>Top predictors: NO₂ lag-1, wind direction, solar radiation</li>
+            <li>Kriging residuals show strong spatial structure (range ≈ 8 km), it confirms RF-STK effectively corrects spatial bias</li>
+            </ul>
+        </div></div>
+
+        <!-- RESULTS CONTENT #2 -->
+    <div class="results-content">
+        <div class="results-text-2">
+              <h2>NO₂ Reconstructed Results</h2>
+            <p><b>On days with >50% data availability:</b> Model V1 produced coarse reconstructions that failed to capture TROPOMI's spatial patterns, while Model V2 performed better, generating more consistent patterns due to the lag day-1 feature. Model V3 achieved the best results, producing smoother and more spatially coherent maps through kriging correction.</p>
+            <p><b>On days with ≤50% data availability:</b> All three models became less stable, with predictions increasingly dominated by predictor variables rather than actual satellite observations. This suggests that model reliability declines significantly when valid data availability is very limited.
+            </p>
+        </div>
+        <img src="../assets/image/result3-a.png" class="result-img-2">
+    </div>
+
+    <!-- RESULTS CONTENT #3 -->
+     <div class="results-content">
+        <img src="../assets/image/result4-a.png" class="result-img-3">
+        <div class="results-text-3">
+            <h2>NO₂ Hotspot Analysis</h2>
+            <p>Hotspot shift is assumed to be linked to national holidays (Vesak Day, Ascension Day, Eid al-Adha), During these periods, traffic activity in residential and educational areas like Tembalang dropped sharply, causing hotspots in these zones to disappear altogether.</p>
+            <p>In contrast, industrial emissions in the western and northern regions remained consistently high, since these facilities continue operating regardless of holiday periods.</p>
+            <p>Road density within hotspot zones was also consistently higher than in non-hotspot zones, peaking at 12.39 km/km² in June.</p>
+            <p>Additionally, the number of industries located within hotspot zones rose sharply during May–June, reaching 33–34 facilities — roughly 40% of all industries in the study area.</p>
+        </div></div>
+
+    <!-- RESULTS CONTENT #4 -->
+     <div class="result-content-2">
+        <h2>NO₂ and ARI Prevalence Analysis</h2>
+        <img src="../assets/image/result5-a.png" class="result-img-4">
+        <div class="results-text-4">
+            <p>GTWR performed substantially better than OLS, with R² rising from 0.031 to 0.681, indicating a much stronger explanatory power. The model's residuals also became more normally distributed and stable, while spatial autocorrelation dropped significantly, as reflected in the decrease of Moran's I from 0.772 to 0.467.</p>
+            <p>In terms of NO2's influence on ARI, higher NO2 levels were generally associated with higher ARI prevalence, as indicated by a positive median coefficient across the study area. This relationship was strongest and most consistent in East Semarang, likely driven by heavy traffic, intensive industrial activity, and dense population in the area. In other sub-districts, however, the effect appeared only intermittently rather than continuously throughout the study period. Importantly, every sub-district exhibited a positive relationship between NO2 and ARI, although the strength of this association varied from place to place. Notably, NO2 concentrations and ARI cases tended to peak together around January and again in late February to March, coinciding with the dry season, when pollutants tend to remain trapped near the ground due to reduced atmospheric dispersion.</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+ </body
